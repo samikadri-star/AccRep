@@ -1,0 +1,6 @@
+{
+  "name": "دفتر المصاريف",
+  "description": "تطبيق متكامل لإدخال وإدارة وحساب المصاريف اليومية والتقارير التفصيلية والإجمالية مع إمكانية تصديرها كـ PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
