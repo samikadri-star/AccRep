@@ -128,3 +128,19 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+
+tasks.register("copyApkToRoot") {
+  dependsOn("assembleDebug")
+  doLast {
+    val srcFile = file(layout.buildDirectory.file("outputs/apk/debug/app-debug.apk"))
+    val destFile = file("${rootDir}/Smart_Expense_Ledger.apk")
+    if (srcFile.exists()) {
+      srcFile.copyTo(destFile, overwrite = true)
+      println("APK copied successfully to: ${destFile.absolutePath}")
+    } else {
+      println("Source APK file not found!")
+    }
+  }
+}
+
+
